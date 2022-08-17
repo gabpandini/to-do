@@ -1,0 +1,15 @@
+header.header {
+  background: var(--gray-700);
+  padding-top: 2rem;
+  
+  > div {
+    max-height: 1440px;
+    margin: 0 auto;
+
+    padding: 2rem 1rem 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
