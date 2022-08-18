@@ -82,7 +82,7 @@ export function TaskList() {
                   <label className="checkbox-container" >
                     <input 
                       type="checkbox" 
-                      className="checkmark" 
+                      
                       readOnly
                       checked={task.isComplete}
                       onClick={() => handleToggleTaskCompletion(task.id)}
