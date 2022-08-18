@@ -1,20 +1,92 @@
 section.task-list {
+  margin-top: -4.4rem;
+
+  header {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    input {
+      background: var(--gray-500);
+      color: var(--gray-300);
+      border: 1px solid var(--gray-700);
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+
+      width: 100%;
+      padding: 1rem;
+    }
+
+    button {
+      background: var(--dark-blue);
+      color: var(--gray-100);
+      font-weight: bold;
+      font-size: 0.875rem;
+
+      border: none;
+      border-radius: 8px;
+      padding: 1rem;
+
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background: var(--blue);
+      }
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+
+    @media(max-width: 375px) {
+      input {
+        font-size: 0.8rem;
+      }
+    }
+  }
 
   main {
+    padding: 4rem 0;
 
+    .noTasks{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+
+      padding: 2rem;
+      color: var(--gray-300);
+
+      svg {
+        color: var(--gray-400);
+        margin-bottom: 1rem;
+      }
+
+      span {
+        & + span {
+          font-weight: 300;
+        }
+      }
+    }
+    
     div {
       display: flex;
       justify-content: space-between;
 
       font-weight: bold;
       font-size: 1rem;
+      margin-bottom: 10px;
 
       .completedTasks{
         color: var(--purple);
+        margin-right: 0.6rem;
       }
 
       .createdTasks {
         color: var(--blue);
+        margin-right: 0.6rem;
       }
       
       .numberOfTaks{
@@ -23,31 +95,65 @@ section.task-list {
         font-size: 0.875rem;
   
         border-radius: 50px;
-        padding: 0.2rem .5rem;
+        padding: 0.2rem 0.5rem;
       }
     }
 
     ul {
       list-style: none;
-
-      background: var(--gray-500);
       color: var(--gray-100);
 
-      button {
-        color: var(--gray-300);
-        background: transparent;
-        border: none;
-        padding: 0.2rem;
-        
+      li {
+        background: var(--gray-500);
+        border-radius: 10px;
+        border: 2px solid var(--gray-400);
+        padding: 1rem;
         display: flex;
-        align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 88px;
+
+        & + li {
+          margin-top: 20px;
+        }
+
+        p {
+          font-weight: 300;
+          padding: 0 1rem;
+        }
+
+        .completed {
+          p {
+            text-decoration: line-through;
+            opacity: 0.6;
+          }
+        }
+
+        button {
+          color: var(--gray-300);
+          background: transparent;
+          border: none;
+          padding: 0.2rem;
+          
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          &:hover {
+            color: var(--red);
+            background: var(--gray-400);
+            border-radius: 5px;
+          }
+        }
       }
-    
-      button:hover {
-        color: var(--red);
-        background: var(--gray-400);
-        border-radius: 4px;
+    }
+
+    @media(max-width: 375px) {
+      .tasksCount {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0.2rem;
       }
     }
   }
