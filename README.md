@@ -1,4 +1,15 @@
-# to-do
+# To Do
+<br/>
+
+<p>Project created with Vite.</p>
+
+Librarys and tools used: 
+- React;
+- SASS; 
+- Phosphor icons;
+- UUID;
+
+<br/>
 
 ![image](https://user-images.githubusercontent.com/86474551/186178276-1d52358a-d17e-4440-836b-e6360675179e.png)
 
